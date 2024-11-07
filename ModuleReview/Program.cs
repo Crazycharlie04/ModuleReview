@@ -44,6 +44,10 @@ namespace ModuleReview
 
             builder.Services.AddScoped<ModuleService>();
 
+            builder.Services.AddScoped<ProgrammeService>();
+
+            builder.Services.AddHttpClient();
+
             builder.Services.AddDbContextFactory<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
             var app = builder.Build();

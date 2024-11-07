@@ -7,5 +7,6 @@ namespace ModuleReview.Data
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
     {
         public DbSet<Module> Modules {  get; set; }
+        public DbSet<Programme> Programmes { get; set; }
     }
 }
